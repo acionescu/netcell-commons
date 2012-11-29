@@ -28,6 +28,7 @@ public class ScheduledJobDefinition extends ConfigurableEntityDefinition{
     public static final String ALLOWED_CONCURENT_JOBS="ALLOWED_CONCURENT_JOBS";
     public static final String MISSFIRE_INSTRUCTION="MISSFIRE_INSTRUCTION";
     public static final String MISSFIRE_VALUE="MISSFIRE_VALUE";
+    public static final String ACTIVE="ACTIVE";
     
     public ScheduledJobDefinition() {
 	setType(EntitiesTypes.SCHEDULED_JOB);
