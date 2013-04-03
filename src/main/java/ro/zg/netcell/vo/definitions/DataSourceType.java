@@ -24,5 +24,6 @@ public enum DataSourceType {
     TELNET,
     SOCKET,
     FILE,
-    XML_RPC;
+    XML_RPC
+    ,LDAP;
 }
