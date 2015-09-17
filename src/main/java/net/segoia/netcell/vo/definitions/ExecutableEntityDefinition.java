@@ -1,31 +1,32 @@
-/*******************************************************************************
- * Copyright 2011 Adrian Cristian Ionescu
- * 
+/**
+ * netcell-commons - Shared support classes for netcell ecosystem
+ * Copyright (C) 2009  Adrian Cristian Ionescu - https://github.com/acionescu
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
- *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- ******************************************************************************/
-package ro.zg.netcell.vo.definitions;
+ */
+package net.segoia.netcell.vo.definitions;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import ro.zg.netcell.vo.InputParameter;
-import ro.zg.netcell.vo.OutputParameter;
-import ro.zg.netcell.vo.configurations.FixedExitPoints;
-import ro.zg.util.data.ObjectsUtil;
-import ro.zg.util.strings.MatchHandler;
-import ro.zg.util.strings.ParamsReplacer;
+import net.segoia.netcell.vo.InputParameter;
+import net.segoia.netcell.vo.OutputParameter;
+import net.segoia.netcell.vo.configurations.FixedExitPoints;
+import net.segoia.util.data.ObjectsUtil;
+import net.segoia.util.strings.MatchHandler;
+import net.segoia.util.strings.ParamsReplacer;
 
 public abstract class ExecutableEntityDefinition extends EntityDefinition{
     /**
