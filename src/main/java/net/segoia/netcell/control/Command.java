@@ -30,6 +30,8 @@ public class Command extends GenericNameValueContext{
     
     private String requestId;
     
+    private String targetContainer;
+    
     public String getName() {
         return name;
     }
@@ -54,6 +56,14 @@ public class Command extends GenericNameValueContext{
      */
     public void setRequestId(String requestId) {
         this.requestId = requestId;
+    }
+
+    public String getTargetContainer() {
+        return targetContainer;
+    }
+
+    public void setTargetContainer(String targetContainer) {
+        this.targetContainer = targetContainer;
     }
     
 }

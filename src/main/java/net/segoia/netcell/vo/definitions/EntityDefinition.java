@@ -17,19 +17,46 @@
 package net.segoia.netcell.vo.definitions;
 
 import java.io.Serializable;
+import java.util.regex.Pattern;
 
 public class EntityDefinition implements Serializable,
 	Comparable<EntityDefinition> {
     private static final long serialVersionUID = 5946883492282248859L;
+    public static final String SEPARATOR = ".";
+    
+    private static final Pattern validationPattern =Pattern.compile("[\\w-*\\.]*[\\w-]");
 
     private String id;
     private String description;
     private String type;
     private EntityType entityType;
+    private String packageName;
+    private String name;
+    
+    
+    public String getPackageName() {
+        return packageName;
+    }
+
+    public void setPackageName(String packageName) {
+        this.packageName = packageName;
+        updateId();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+        updateId();
+    }
 
     public boolean validate() {
-	// TODO : implement this
-	return true;
+	if(id == null) {
+	    return false;
+	}
+	return validationPattern.matcher(id).matches();
     }
 
     /**
@@ -59,6 +86,31 @@ public class EntityDefinition implements Serializable,
      */
     public void setId(String id) {
 	this.id = id;
+	updateFromId();
+    }
+    
+    private void updateId() {
+	if(name == null) {
+	    return;
+	}
+	if(packageName != null) {
+	    id = packageName+SEPARATOR+name;
+	}
+	else {
+	    id = name;
+	}
+    }
+    
+    private void updateFromId() {
+	if(id == null) {
+	    return;
+	}
+	
+	int index = id.lastIndexOf(SEPARATOR);
+	if(index > 0) {
+	    packageName = id.substring(0, index);
+	    name = id.substring(index+1);
+	}
     }
 
     /**

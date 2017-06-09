@@ -14,14 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.segoia.netcell.vo.definitions;
+package net.segoia.netcell.control;
 
-public class EntitiesTypes {
-    public static final String WORKFLOW = "workflow-definition";
-    public static final String COMPONENT = "component-definition";
-    public static final String DATASOURCE  = "datasource-definition";
-    public static final String DATA_ACCESS_COMPONENT = "data-access-component-definition";
-    public static final String CONFIGURABLE_COMPONENT="configurable-component-definition";
-    public static final String SCHEDULED_JOB="scheduled-job-definition";
-    public static final String CONTAINER="container-definition";
+public class CommandParams {
+    public static final String FLOW_ID = "fid";
+    public static final String CONNECTION_ID = "cid";
 }

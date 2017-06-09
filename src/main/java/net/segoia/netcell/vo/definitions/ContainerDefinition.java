@@ -16,12 +16,11 @@
  */
 package net.segoia.netcell.vo.definitions;
 
-public class EntitiesTypes {
-    public static final String WORKFLOW = "workflow-definition";
-    public static final String COMPONENT = "component-definition";
-    public static final String DATASOURCE  = "datasource-definition";
-    public static final String DATA_ACCESS_COMPONENT = "data-access-component-definition";
-    public static final String CONFIGURABLE_COMPONENT="configurable-component-definition";
-    public static final String SCHEDULED_JOB="scheduled-job-definition";
-    public static final String CONTAINER="container-definition";
+public class ContainerDefinition extends ConfigurableEntityDefinition{
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -3477341930308376082L;
+
 }
